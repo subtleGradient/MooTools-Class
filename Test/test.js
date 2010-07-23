@@ -5,5 +5,5 @@ require.paths.unshift('./lib')
 require.paths.unshift('./Test/lib')
 
 require('mootools-class')
-require('JSSpec')
+require('sg-JSSpec.CommonJS')
 require('./Class.test')

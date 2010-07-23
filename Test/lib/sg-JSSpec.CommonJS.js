@@ -2,6 +2,7 @@
 ---
 name : JSSpec
 description : Implementation of the public JSSpec API using the CommonJS Unit Test 1.0 API or QUnit
+version : '0.1alpha'
 
 authors   : Thomas Aylott
 copyright : © 2010 Thomas Aylott
@@ -12,7 +13,10 @@ provides :
 - describe
 - value_of
 - assert
-#requires : assert || QUnit || require('assert')
+
+# requires :
+# - assert || QUnit || require('assert')
+# - test/runner || sg-testrunner
 ...
 */
 
@@ -107,11 +111,9 @@ function value_of(actual){
 	this.actual = actual
 }
 
-value_of.should_be_true = assert.ok
-value_of.should_be = assert.equal
-
 value_of.should_fail             = function(fn, message){}
 value_of.should_be               = assert.equal
+value_of.should_be_true          = assert.ok
 value_of.should_not_be           = function(actual, expected, message){}
 value_of.should_be_empty         = function(actual, message){}
 value_of.should_not_be_empty     = function(actual, message){}
