@@ -139,16 +139,6 @@ for (var methodName in value_of){
 	value_of.prototype[methodName] = passArgumentFromThis(value_of[methodName], 'actual')
 }
 
-/*
-function passArgument(fn, propertyNames){
-	var a = propertyNames
-	var undefined = void+0
-	return function(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20){
-		if (a[1] === undefined) a1 = a[1]
-		return fn(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)
-	}
-}
-*/
 function passArgumentFromThis(fn, propertyName){
 	return function(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20){
 		return fn(this[propertyName], a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)
