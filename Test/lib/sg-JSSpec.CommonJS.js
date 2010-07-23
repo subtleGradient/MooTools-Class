@@ -50,6 +50,9 @@ try {
 try {
 	if (!exports.run) run = exports.run = require('sg-testrunner').run
 } catch(e){}
+try {
+	if (!exports.run) run = exports.run = require('./sg-testrunner').run
+} catch(e){}
 
 
 function describeTest(test, before, after){
