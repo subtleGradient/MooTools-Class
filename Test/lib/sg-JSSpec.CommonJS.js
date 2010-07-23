@@ -114,27 +114,30 @@ function value_of(actual){
 	this.actual = actual
 }
 
-value_of.should_fail             = function(fn, message){}
+function notImplemented(){ throw new Error('Not Implemented Yet') }
+
+
+value_of.should_fail             = assert['throws']
 value_of.should_be               = assert.equal
 value_of.should_be_true          = assert.ok
-value_of.should_not_be           = function(actual, expected, message){}
-value_of.should_be_empty         = function(actual, message){}
-value_of.should_not_be_empty     = function(actual, message){}
-value_of.should_be_true          = function(actual, message){}
-value_of.should_be_false         = function(actual, message){}
-value_of.should_be_null          = function(actual, message){}
-value_of.should_be_undefined     = function(actual, message){}
-value_of.should_not_be_null      = function(actual, message){}
-value_of.should_not_be_undefined = function(actual, message){}
-value_of.should_have             = function(actual, expected, message){}
-value_of.should_have_exactly     = function(actual, expected, message){}
-value_of.should_have_at_least    = function(actual, expected, message){}
-value_of.should_have_at_most     = function(actual, expected, message){}
-value_of.should_include          = function(actual, expected, message){}
-value_of.should_not_include      = function(actual, expected, message){}
-value_of.should_match            = function(actual, expected, message){}
-value_of.should_not_match        = function(actual, expected, message){}
-value_of.getType                 = function(actual){}
+value_of.should_not_be           = notImplemented // function(actual, expected, message){}
+value_of.should_be_empty         = notImplemented // function(actual, message){}
+value_of.should_not_be_empty     = notImplemented // function(actual, message){}
+value_of.should_be_true          = notImplemented // function(actual, message){}
+value_of.should_be_false         = notImplemented // function(actual, message){}
+value_of.should_be_null          = notImplemented // function(actual, message){}
+value_of.should_be_undefined     = notImplemented // function(actual, message){}
+value_of.should_not_be_null      = notImplemented // function(actual, message){}
+value_of.should_not_be_undefined = notImplemented // function(actual, message){}
+value_of.should_have             = notImplemented // function(actual, expected, message){}
+value_of.should_have_exactly     = notImplemented // function(actual, expected, message){}
+value_of.should_have_at_least    = notImplemented // function(actual, expected, message){}
+value_of.should_have_at_most     = notImplemented // function(actual, expected, message){}
+value_of.should_include          = notImplemented // function(actual, expected, message){}
+value_of.should_not_include      = notImplemented // function(actual, expected, message){}
+value_of.should_match            = notImplemented // function(actual, expected, message){}
+value_of.should_not_match        = notImplemented // function(actual, expected, message){}
+value_of.getType                 = notImplemented // function(actual){}
 
 
 for (var methodName in value_of){
